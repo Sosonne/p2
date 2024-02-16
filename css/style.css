@@ -1,6 +1,8 @@
 /****** General ***********/
 * {
     font-family: 'Raleway', sans-serif;
+    box-sizing: border-box;
+    
 }
 
 :root {
@@ -22,6 +24,39 @@
 body {
     display: flex;
     justify-content: center;
+    margin: 0;
+}
+
+.header {
+    display: flex;
+    justify-content: space-between;
+    height: 79px;
+    
+
+}
+
+.header-menu {
+    display: flex;
+    gap: 20px;
+
+}
+
+.header-item {
+    margin: 0;
+    padding-top: 20px;
+}
+
+
+.header-item:hover {
+    color: #0065FC;
+    padding-top: 18px;
+    border-top: 2px solid #0065FC;
+}
+
+.header-image {
+    height: 19px;
+    margin-top: auto;
+    margin-bottom: auto;
 }
 
 .main-container {
@@ -64,7 +99,160 @@ a {
     color: var(--main-bg-color)
 }
 
+h1 {
+    font-size: 22px;
+}
+
+.form {
+    display: flex;
+    align-items: center;
+    height: 49px;
+}
+
+.info {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    margin-bottom: 20px;
+}
+
+.icon-info {
+    width: 24px;
+    height: 24px;
+    border: 1px solid #D9D9D9;
+    border-radius: 50%;
+    align-items: center;
+    display: flex;
+    justify-content: center;
+}
+
+.info-search {
+    width: 50px;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: #F2F2F2;
+    border-radius: 15px 0px 0px 15px;
+
+}
+
+.form {
+    gap: 24px;
+}
+
+.search-input {
+    height: 49px;
+    width: 195px;
+    padding: 0;
+    padding-block: 0;
+    padding-inline: 0;
+    border-width: 0cap;
+}
+
+.search-input2 {
+    height: 49px;
+    border-radius: 0px 15px 15px 0;
+    padding: 0 16px;
+    border-width: 0cap;
+    background-color: #0065FC;
+    font-weight: bolder;
+    color: white;
+}
+
+.list {
+    list-style-type: none;
+    padding: 0;
+    display: flex;
+    gap: 15px;
+}
+
+.liste {
+    border-radius: 25px;
+    border: 2px solid rgba(217, 217, 217, 1);
+    padding: 4px 19px;
+    display: flex;
+    gap: 10px;
+    align-items: center;
+}
+
+.liste:hover {
+    background-color: rgba(222, 235, 255, 1);
+
+}
+
+.list-bis {
+    list-style-type: none;
+    padding: 0;
+    margin: 0;
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    font-size: 16px;
+}
+
+.plus {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+    padding: 20px;
+    width: 33%;
+    white-space: nowrap;
+}
+
+footer, .filter {
+    display: flex;
+}
+
+.filter{
+    align-items: center;
+    gap: 20px;
+}
+
+.title-plus {
+    margin: 0;
+}
+
+.filters {
+    padding: 4px;
+    border-radius: 25px;
+}
+
+.plus {
+    background-color: rgba(242, 242, 242, 1);
+}
+
+.more {
+    margin-right: auto;
+}
+
+.activities{
+    padding: 30px;
+}
+
+.activities-cards {
+    display: flex;
+    gap: 30px;
+}
+
+.activities-card {
+    border-radius: 20px;
+    box-shadow: 0px 3px 15px 0px rgba(0, 0, 0, 0.1);
+    width: calc((100% - 60px) / 4);    
+}
+
+.activities-card .card-title {
+    margin: 20px 19px;
+}
+.activities-card-image {
+    width: 100%;
+    height: 380px;
+    object-fit: cover;
+}
+
+
 /****** Hebergements And populars ***********/
+
 .hebergements-and-populars {
     display: flex;
     justify-content: space-between;
@@ -77,14 +265,60 @@ a {
     box-sizing: border-box;
 }
 
+
+
 /****** Hebergements ***********/
+
 .hebergements {
     width: 65%;
+    gap: 30px;
 }
 
+.cards-marseille {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 30px;
+    justify-content: space-between;
+    margin-top: 33px;
+}
+
+.card-marseille {
+    /*Permet de calculer la width de ma carte par rapport à la width de mon parent moins ses paddings 
+    (en desktop 3 elements par ligne => (largeur de mon parent - ses paddings) / 3)*/
+    width: calc((100% - 60px) / 3);
+    background-color: white;
+    padding: 5px;
+    border-radius: 20px;
+}
+
+.card-marseille-image {
+    width: 100%;
+    height: 124px;
+    object-fit: cover;
+    border-radius: 20px 20px 0px 0px;
+}
+
+.marseille-title {
+    margin: auto;
+}
+
+
+/**** Activities ****/
+
+.activities {
+    width: 100%;
+}
+
+.activities-card-image {
+    border-radius: 20px 20px 0px 0px;
+}
+
+
 /****** populars ***********/
+
 .populars {
     width: 32%;
+    gap: 30px;
 }
 
 .populars-title {
@@ -134,6 +368,7 @@ a {
 
 /****** Media queries ***********/
 /* Medium devices (tablets, less/equal than 1024px) */
+
 @media (max-width: 1024px) {
     .hebergements-and-populars {
         flex-direction: column;
@@ -164,6 +399,10 @@ a {
 
     .populars-cards .card-subtitle {
         font-size: 13px;
+    }
+
+    .filter {
+        display: block;
     }
 }
 
