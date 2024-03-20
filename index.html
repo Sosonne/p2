@@ -15,30 +15,32 @@
 </head>
 
 <body>
-    <div class="main-container" alt="logo Booki">
+    <div class="main-container">
         <header class="header">
             <img class="header-image" src="./Images/Logo/Booki.png" alt="Logo Booki"/>
             <nav class="header-menu">
                 <a href="#hebergements" class="header-item">Hébergements</a>
                 <a href="#activities" class="header-item">Activités</a>
             </nav>  
-               
         </header>
 
-       <h1>Trouvez votre hébergement pour des vacances de rêve</h1> 
-        <p>En plein centre ville ou en pleine nature</p>
+        <h1 class="header-title">Trouvez votre hébergement pour des vacances de rêve</h1> 
+        <p class="header-parapher">En plein centre ville ou en pleine nature</p>
 
-        <form class="form" method="get" action=""> 
+        <form class="form" method="get" action="#"> 
             <div class="info-search">
                 <i class="fa-solid fa-location-dot"></i>
             </div>
             <input class="search-input" type="text" name="Rechercher" id="Rechercher" placeholder="Marseille, France"/> 
-            <input class="search-input2" type="submit" value="Rechercher">
+            <input class="search-input2" type="submit" value="Rechercher"/>
+            <button class="button2">
+                <i class="fa-solid fa-magnifying-glass input-mobile"></i>
+            </button>
         </form>
 
         <div class="filter">
-            <h3 class="card-title">Filtres</h3>
-            <ul class="list">
+            <p class="title-filters">Filtres</p>
+            <ul class="first-list">
                 <li class="liste"><i class="fa-solid fa-money-bill-wave filters"></i>Economique</li>
                 <li class="liste"><i class="fa-solid fa-person filters"></i>Familial</li>
                 <li class="liste"><i class="fa-solid fa-heart filters"></i>Romantique</li>
@@ -84,7 +86,6 @@
                             <a href="#">
                                 <img class="card-marseille-image" src="./Images/Hebergements/febrian-zakaria.jpg" alt="Image de la chambre d'hôtel">
                                 <div class="card-content">
-                                    <div class="card-txt"></div>
                                     <h3 class="card-title">Hôtel Chez Amina</h3>
                                     <p class="card-subtitle">Nuit à parti de 96<span class="euro">€</span></p>
                                     </div>
@@ -268,24 +269,24 @@
             </section>
         </main>
         <footer>
-            <div class="plus">
+            <div class="footer-plus">
                 <h4 class="title-plus">A propos</h4>
-                <ul class="list-bis">
+                <ul class="second-list">
                     <li>Fonctionnement du site</li>
                     <li>Conditions générales</li>
                     <li>Données et confidentialités</li>
                 </ul>
             </div>
-            <div class="plus">
+            <div class="footer-plus">
                 <h4 class="title-plus">Nos hébergements</h4>
-                <ul class="list-bis">
+                <ul class="second-list">
                     <li>Chartre qualité</li>
                     <li>Proposer votre hôtel</li>
                 </ul>
             </div>
-            <div class="plus">
+            <div class="footer-plus">
                 <h4 class="title-plus">Assistance</h4>
-                <ul class="list-bis">
+                <ul class="second-list">
                     <li>Centre d'aide</li>
                     <li>Nous contacter</li>
                 </ul>
